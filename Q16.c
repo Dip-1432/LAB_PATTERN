@@ -1,9 +1,11 @@
 /*
-    *
+* * * *
   * * *
-* * * * *
+    * *
+      * 
+    * *
   * * *
-    * 
+* * * *   
 */
 #include<stdio.h>
 int main()
@@ -12,15 +14,15 @@ int main()
     int n;
     printf("Enter the number of rows:\n");
     scanf("%d",&n);
-    for( int i=1;i<n*2;++i)
+    for(int i=n*2;i>1;--i)
     {
-        if(i<=n)
+        if(i>n)
         {
-            for(int k=n;k>i;--k)
+            for(int k=n;k>i-n;--k)
             {
                 printf("  ");
             }
-            for(int j=0;j<=(i-1)*2;++j)
+            for(int j=1;j<=i-n;++j)
             {
                 printf("* ");
             }
@@ -28,17 +30,16 @@ int main()
         }
         else
         {
-            for(int k=i-n;k>=1;--k)
+            for(int k=1;k<i-1;++k)
             {
                 printf("  ");
             }
-            for(int j=(i-n)*2-1;j<=(n-1)*2-1;++j)
+            for(int j=n;j>=i-1;--j)
             {
                 printf("* ");
             }
             printf("\n");
         }
-    
     }
     return 0;
 }
